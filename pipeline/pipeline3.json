@@ -7,6 +7,12 @@
 			},
 			"TableName": {
 				"type": "string"
+			},
+			"WatermarkColumn": {
+				"type": "string"
+			},
+			"LastLoadValue": {
+				"type": "string"
 			}
 		},
 		"annotations": []
