@@ -39,10 +39,7 @@
 				"value": "@dataset().schemaname",
 				"type": "Expression"
 			},
-			"table": {
-				"value": "@dataset().tablename",
-				"type": "Expression"
-			}
+			"table": "@dataset().schemaname"
 		}
 	}
 }
