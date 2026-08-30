@@ -9,7 +9,7 @@
 				"userProperties": []
 			},
 			{
-				"name": "LKUP_MAX_VALUE1",
+				"name": "LKUP_MAX_VALUE",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -23,6 +23,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
+						"sqlReaderQuery": {
+							"value": "SELECT MAX(@{pipeline().parameters.WatermarkColumn}) AS MaxValue\nFROM @{pipeline().parameters.TableSchema}.@{pipeline().parameters.TableName}",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -43,17 +47,23 @@
 				}
 			},
 			{
-				"name": "If Condition2",
+				"name": "IF_NEWRECORD_EXISTS",
 				"type": "IfCondition",
 				"dependsOn": [
 					{
-						"activity": "LKUP_MAX_VALUE1",
+						"activity": "LKUP_MAX_VALUE",
 						"dependencyConditions": [
 							"Succeeded"
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@or(equals(pipeline().parameters.LastLoadValue, null), greater(int(activity('LKUP_MAX_VALUE').output.firstRow.MaxValue), int(pipeline().parameters.LastLoadValue)))",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
