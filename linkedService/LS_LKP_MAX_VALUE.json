@@ -2,6 +2,14 @@
 	"name": "LS_LKP_MAX_VALUE",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
+		"parameters": {
+			"schemaname": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
@@ -11,7 +19,7 @@
 			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "adfuserswe",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0ZGQ1OThkYi03OWE1LTRjMjUtYjU3Mi02YzQzOWQxMzgxMzUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJiOTJiMjRkNC1jYzA5LTQzNWUtOWRjMy0xM2VmNjkzNWNlM2IiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime1",
