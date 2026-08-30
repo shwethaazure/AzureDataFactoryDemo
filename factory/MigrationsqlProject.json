@@ -1,0 +1,15 @@
+{
+	"name": "MigrationsqlProject",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3d32522f-be64-4c45-9a4a-dbdc468e4148",
+		"tenantId": "fcf67057-50c9-4ad4-98f3-ffca64add9e9"
+	}
+}
