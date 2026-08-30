@@ -1,0 +1,14 @@
+{
+	"name": "pipeline3",
+	"properties": {
+		"parameters": {
+			"Tableschema": {
+				"type": "string"
+			},
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
