@@ -2,6 +2,14 @@
 	"name": "LS_MAXLOOKUP_SQL",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
+		"parameters": {
+			"SchemaName": {
+				"type": "string"
+			},
+			"TableName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
@@ -11,7 +19,7 @@
 			"trustServerCertificate": false,
 			"authenticationType": "SQL",
 			"userName": "adfuserswe",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI2ZWRkZDAyNS04YWI4LTQ5ODEtOWRkMy01OTVhMTU0YjYyNmEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzN2M4ZDM4Yi1iMTY2LTQ5MWUtODM2Ni00OTgwNDM4OTJlNTQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime1",
