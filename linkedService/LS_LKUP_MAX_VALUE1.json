@@ -7,11 +7,11 @@
 		"typeProperties": {
 			"server": "localhost",
 			"database": "Retaildata_uat",
-			"encrypt": "optional",
+			"encrypt": "mandatory",
 			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "adfuserswe",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0ZjdkNTE5MS05ZTQ5LTRhNDUtOGJjZC0zNzc5YTMxZjFkMzciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyYThhN2RmNy0yNzZhLTQ2ZmYtOTlkNC1jZmZkM2E0ZDA3ODAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime2",
