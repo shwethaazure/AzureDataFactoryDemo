@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "LKUP_SQLTABBLE_DWHWATERMARK",
+				"name": "LKUP_SQLTABBLE_WATERMARK_DWH",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -33,7 +33,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "LKUP_SQLTABBLE_DWHWATERMARK",
+						"activity": "LKUP_SQLTABBLE_WATERMARK_DWH",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -42,7 +42,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('LKUP_SQLTABBLE_DWHWATERMARK').output.value",
+						"value": "@activity('LKUP_SQLTABBLE_WATERMARK_DWH').output.value",
 						"type": "Expression"
 					},
 					"activities": [
@@ -66,17 +66,14 @@
 										"type": "Expression"
 									},
 									"TableName": {
-										"value": "@item().TableNmae",
+										"value": "@item().TableName",
 										"type": "Expression"
 									},
 									"WatermarkColumn": {
 										"value": "@item().WatermarkColumn",
 										"type": "Expression"
 									},
-									"LastLoadValue": {
-										"value": "@item().LastLoadValue",
-										"type": "Expression"
-									}
+									"LastLoadValue": "@item().LastLoadValue"
 								}
 							}
 						}
