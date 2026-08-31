@@ -73,7 +73,10 @@
 										"value": "@item().WatermarkColumn",
 										"type": "Expression"
 									},
-									"LastLoadValue": "@item().LastLoadValue"
+									"LastLoadValue": {
+										"value": "@item().LastLoadValue",
+										"type": "Expression"
+									}
 								}
 							}
 						}
